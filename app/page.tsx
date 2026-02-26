@@ -1,65 +1,90 @@
-import Image from "next/image";
-
 export default function Home() {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex min-h-screen w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
-        </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
-      </main>
+    <div
+      style={{
+        minHeight: "100vh",
+        width: "100vw",
+        background: "linear-gradient(120deg, #f3f4f6 0%, #a5b4fc 60%, #4f46e5 100%)",
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "center",
+        justifyContent: "flex-start",
+        paddingTop: "4rem"
+      }}
+    >
+      <h1
+        style={{
+          fontSize: "3rem",
+          fontWeight: 900,
+          color: "#4f46e5",
+          letterSpacing: "-0.03em",
+          marginBottom: "1rem",
+          textShadow: "0 2px 8px rgba(79,70,229,0.10)"
+        }}
+      >
+        VC <span style={{ color: '#1e293b' }}>Intelligence</span>
+      </h1>
+      <span
+        style={{
+          fontSize: "1.35rem",
+          color: "#6366f1",
+          fontWeight: 600,
+          letterSpacing: "0.01em",
+          marginBottom: "2.5rem",
+          display: "inline-block"
+        }}
+      >
+        Your startup search platform
+      </span>
+
+      {/* Why use VC Intelligence section removed as requested */}
+
+      <h3 style={{ fontSize: "1.15rem", fontWeight: 600, color: "#6366f1", marginBottom: "0.5rem", textAlign: "center" }}>Featured Companies</h3>
+      <div style={{ display: "flex", flexWrap: "wrap", gap: "1.5rem", justifyContent: "center", marginBottom: "2rem" }}>
+        {[
+          { name: "Stripe", industry: "Fintech" },
+          { name: "Notion", industry: "Productivity" },
+          { name: "OpenAI", industry: "AI" },
+          { name: "Airbnb", industry: "Travel" },
+          { name: "Tesla", industry: "Automotive" },
+          { name: "Shopify", industry: "E-commerce" },
+          { name: "Meta", industry: "Social Media" },
+          { name: "SpaceX", industry: "Aerospace" }
+        ].map((c) => (
+          <div key={c.name} style={{
+            background: "none",
+            borderRadius: "0.75rem",
+            padding: "0.75rem 1.25rem",
+            minWidth: 120,
+            textAlign: "center",
+            fontWeight: 500,
+            color: "#3730a3",
+            border: "1px solid #e0e7ff"
+          }}>
+            <div style={{ fontSize: "1.1rem" }}>{c.name}</div>
+            <div style={{ fontSize: "0.95rem", color: "#6366f1" }}>{c.industry}</div>
+          </div>
+        ))}
+      </div>
+
+      <div style={{ marginTop: "1.5rem", textAlign: "center" }}>
+        <a
+          href="/companies"
+          style={{
+            background: "#6366f1",
+            color: "#fff",
+            padding: "0.85rem 2.2rem",
+            borderRadius: "0.75rem",
+            fontWeight: 700,
+            fontSize: "1.15rem",
+            textDecoration: "none",
+            boxShadow: "0 2px 8px rgba(99,102,241,0.10)",
+            transition: "background 0.2s"
+          }}
+        >
+          Start Exploring Companies →
+        </a>
+      </div>
     </div>
   );
 }

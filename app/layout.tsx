@@ -26,8 +26,76 @@ export default function RootLayout({
     <html lang="en">
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        style={{ margin: 0, padding: 0 }}
       >
-        {children}
+        <div style={{ display: "flex", minHeight: "100vh" }}>
+          {/* Sidebar */}
+          <nav
+            style={{
+              width: "260px",
+              background: "linear-gradient(120deg, #4f46e5 0%, #a5b4fc 60%, #f3f4f6 100%)",
+              padding: "3rem 2rem 2rem 2rem",
+              borderRight: "1px solid #a5b4fc",
+              display: "flex",
+              flexDirection: "column",
+              gap: "2.5rem",
+              minHeight: "100vh",
+              boxShadow: "0 8px 32px 0 rgba(79,70,229,0.12)",
+              alignItems: "flex-start",
+            }}
+          >
+
+            <a
+              href="/companies"
+              style={{
+                textDecoration: "none",
+                color: "#fff",
+                background: "rgba(79,70,229,0.18)",
+                padding: "0.9rem 1.2rem",
+                borderRadius: "0.9rem",
+                fontWeight: 700,
+                fontSize: "1.15rem",
+                marginBottom: "0.5rem",
+                boxShadow: "0 2px 8px 0 rgba(79,70,229,0.08)",
+                letterSpacing: "0.02em",
+                transition: "background 0.2s, color 0.2s"
+              }}
+            >Companies</a>
+            <a
+              href="/lists"
+              style={{
+                textDecoration: "none",
+                color: "#fff",
+                background: "rgba(79,70,229,0.18)",
+                padding: "0.9rem 1.2rem",
+                borderRadius: "0.9rem",
+                fontWeight: 700,
+                fontSize: "1.15rem",
+                marginBottom: "0.5rem",
+                boxShadow: "0 2px 8px 0 rgba(79,70,229,0.08)",
+                letterSpacing: "0.02em",
+                transition: "background 0.2s, color 0.2s"
+              }}
+            >Lists</a>
+            <a
+              href="/saved"
+              style={{
+                textDecoration: "none",
+                color: "#fff",
+                background: "rgba(79,70,229,0.10)",
+                padding: "0.9rem 1.2rem",
+                borderRadius: "0.9rem",
+                fontWeight: 700,
+                fontSize: "1.15rem",
+                boxShadow: "0 2px 8px 0 rgba(79,70,229,0.08)",
+                letterSpacing: "0.02em",
+                transition: "background 0.2s, color 0.2s"
+              }}
+            >Saved</a>
+          </nav>
+          {/* Content */}
+          <main style={{ flex: 1, padding: "2rem" }}>{children}</main>
+        </div>
       </body>
     </html>
   );
