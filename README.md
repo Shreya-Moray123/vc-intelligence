@@ -1,36 +1,101 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# VC Intelligence Platform
 
-## Getting Started
+A lightweight VC research tool built with Next.js.
 
-First, run the development server:
+This platform allows users to:
+- Browse companies
+- View company profiles
+- Enrich company data using AI
+- Create custom lists
+- Save searches locally
 
-```bash
+---
+
+## 🚀 Features
+
+### 📊 Companies
+- Search and filter companies
+- View detailed company profile page
+- AI-powered enrichment (website summarization)
+
+### 📂 Lists
+- Create custom lists
+- Add companies to lists
+- Data persisted in localStorage
+
+### 💾 Saved Searches
+- Save search queries
+- Retrieve saved searches
+- Stored in localStorage
+
+---
+
+## 🧠 AI Enrichment
+
+The Enrich feature:
+1. Fetches company website content
+2. Sends content to OpenAI API
+3. Returns summarized company description
+
+Note:
+An OpenAI API key is required in `.env.local`.
+
+---
+
+## 🛠 Tech Stack
+
+- Next.js (App Router)
+- TypeScript
+- Tailwind CSS
+- OpenAI API
+- localStorage (for persistence)
+
+---
+
+## ⚙️ Setup Instructions
+
+1. Clone repository
+git clone <repo-url>
+cd vc-intelligence
+
+
+2. Install dependencies
+
+npm install
+
+
+3. Create `.env.local`
+
+
+OPENAI_API_KEY=your_api_key_here
+
+
+4. Run development server
+
+
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+---
 
-## Learn More
+## 🔐 Security
 
-To learn more about Next.js, take a look at the following resources:
+- API keys are stored in `.env.local`
+- `.env.local` is ignored via `.gitignore`
+- No secrets are committed
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+---
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 📌 Future Improvements
 
-## Deploy on Vercel
+- Add backend database
+- Structured AI output (JSON)
+- Authentication system
+- Deployment on Vercel
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+---
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 👩‍💻 Author
+
+Shreya Moray
