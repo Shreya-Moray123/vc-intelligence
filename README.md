@@ -55,7 +55,7 @@ An OpenAI API key is required in `.env.local`.
 ## ⚙️ Setup Instructions
 
 1. Clone repository
-git clone <repo-url>
+git clone <https://github.com/Shreya-Moray123/vc-intelligence.git>
 cd vc-intelligence
 
 
